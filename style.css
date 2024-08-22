@@ -1,0 +1,177 @@
+/* varibles */
+:root {
+  --main-color: #0084ff;
+  --text-color: #fff;
+}
+/* varibles */
+* {
+  font-family: sans-serif;
+}
+
+/* Animations */
+@keyframes menu-animation {
+  0% {
+    -webkit-transform: translateX(-100);
+    -moz-transform: translateX(-100);
+    -ms-transform: translateX(-100);
+    -o-transform: translateX(-100);
+    transform: translateX(-100);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+/* Animations */
+
+/* Starts Menu Style */
+.close-container {
+  display: none;
+}
+.menu, .close {
+  cursor: pointer;
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .menu, .close {
+    display: inline-block !important;
+  }
+  .close-container {
+    display: flex;
+  }
+  .links-of-sections {
+    animation-name: menuAnimation;
+    animation-duration: 0.5s;
+  }
+  .bg-menu {
+    background-color: #33333333;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .menu-eles-container {
+    background-color: #333;
+    height: 100%;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation-name: menu-animation;
+    animation-duration: 0.5s;
+  }
+  .menu-eles-container a {
+    width: 100%;
+    border-top: #0084ff solid 2px;
+    border-bottom: #0084ff solid 2px;
+    padding: 10px;
+  }
+}
+/* Ends Menu Style */
+
+/* Starts Header Style */
+header {
+  background-color: #333;
+  color: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.links-of-sections {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .links-of-sections a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+header .links-of-sections a:hover {
+  color: var(--main-color);
+}
+/* Ends Header Style */
+
+main {
+  background-color: var(--main-color);
+  color: #fff;
+  height: 100vh;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+main img {
+  width: 800px;
+}
+section.about .doctors-img-container img {
+  width: 450px;
+}
+section.products .product-card {
+  background-color: var(--main-color);
+  height: 350px;
+}
+section.contact .contact-links a {
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 30px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+section.contact .contact-links a:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+footer {
+  background-color: #111;
+  color: #fff;
+  height: 300px;
+}
+footer table.work-days {
+  width: 500px;
+}
+footer table.work-days tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  main img {
+    width: 400px;
+  }
+  section.about .doctors-img-container img {
+    width: 300px;
+  }
+  section.contact .google-map {
+    width: 100%;
+  }
+  section.contact .google-map iframe {
+    width: 100%;
+  }
+  section.contact .contact-links {
+    height: 500px;
+  }
+  section.contact .contact-links :nth-child(1).link {
+    font-size: 14px;
+  }
+  section.products .container-of-products {
+    height: 800px;
+  }
+}
